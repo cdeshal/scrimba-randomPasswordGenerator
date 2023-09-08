@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Generate a <br><span id="hero-green">random password</span></h1>
+        <p id="hero-subheading">Never use an insecure password again.</p>
+        <button id="generatePassword-btn" onclick="getStatus()">Generate new password</button>
+        <div>
+            <input type="range" min="8" max="100" value="16" id="passwordLen-range">
+            <p>Password length: <span id="passwordLen-p"></span></p>
+            <div id="checkbox-container">
+                <input type="checkbox" id="num-checkbox" onclick="getStatus()" checked> <span class="gray-text">Numbers</span>
+                <input type="checkbox" id="char-checkbox" onclick="getStatus()" checked> <span class="gray-text">Characters</span>
+            </div>
+        </div>
+        <div id="border"></div>
+        <div id="password-container">
+            <p id="leftPassword-p" onclick="copyLeftPassword()"></p>
+            <p id="rightPassword-p" onclick="copyRightPassword()"></p>
+        </div>
+        <p id="alertMsg">Click on password to copy</p>
+
+        <script src="index.js"></script>
+        <script>getStatus()</script>
+    </body>
+</html>
